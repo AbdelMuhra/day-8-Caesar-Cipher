@@ -10,8 +10,8 @@
 
 #greet_with(name = name,location = location)
 
-
-
+#made a program to calculate the area of a triangle
+x=1
 # Python Program to find the area of triangle
 
 
