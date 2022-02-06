@@ -10,18 +10,35 @@
 
 #greet_with(name = name,location = location)
 
-#made a program to calculate the area of a triangle
-x=1
-# Python Program to find the area of triangle
 
 
-a = float(input('Enter first side: '))
-b = float(input('Enter second side: '))
-c = float(input('Enter third side: '))
+#area of a triangle
+def triangle():
+  x=1
+  # Python Program to find the area of triangle
 
-# Semi-perimeter
-s = (a + b + c) / 2
 
-#area
-area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-print('The area of the triangle is %0.2f' %area)
+  a = float(input('Enter first side: '))
+  b = float(input('Enter second side: '))
+  c = float(input('Enter third side: '))
+
+  # Semi-perimeter
+  s = (a + b + c) / 2
+
+  #area
+  area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
+  print('The area of the triangle is %0.2f' %area)
+
+#area of circle
+def circle():
+  PI = 3.142
+  r = float(input("Enter the radius of a circle:"))
+  area = PI * r * r
+  print("Area of a circle = %.2f" %area)
+
+whicharea=input("what would you like to calculate?\nTriangle (T) or Circle (C)?\n")
+
+if whicharea=="T":
+  triangle()
+else:
+  circle()
