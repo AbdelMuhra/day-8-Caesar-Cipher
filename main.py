@@ -1,44 +1,27 @@
-# Review: 
-# Create a function called greet(). 
-# Write 3 print statements inside the function.
-# Call the greet() function and run your code.
-#name=input("Name?\n")
-#location = input("Where are you?\n")
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-#def greet_with(name, location):
-#  print(f"Hello {name}.  what is is like in {location}?")
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+text = input("Type your message:\n").lower()
+shift = int(input("Type the shift number:\n"))
 
-#greet_with(name = name,location = location)
+#TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
+def encrypt(text,shift):
+  for i in len(text):
+    text[i]=alphabet[shift]
+    print(text)
 
+encrypt(text,shift)
 
+    #TODO-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.  
+    #e.g. 
+    #plain_text = "hello"
+    #shift = 5
+    #cipher_text = "mjqqt"
+    #print output: "The encoded text is mjqqt"
 
-#area of a triangle
-def triangle():
-  x=1
-  # Python Program to find the area of triangle
+    ##HINT: How do you get the index of an item in a list:
+    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
 
+    ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
 
-  a = float(input('Enter first side: '))
-  b = float(input('Enter second side: '))
-  c = float(input('Enter third side: '))
-
-  # Semi-perimeter
-  s = (a + b + c) / 2
-
-  #area
-  area = (s*(s-a)*(s-b)*(s-c)) ** 0.5
-  print('The area of the triangle is %0.2f' %area)
-
-#area of circle
-def circle():
-  PI = 3.142
-  r = float(input("Enter the radius of a circle:"))
-  area = PI * r * r
-  print("Area of a circle = %.2f" %area)
-
-whicharea=input("what would you like to calculate?\nTriangle (T) or Circle (C)?\n")
-
-if whicharea=="T":
-  triangle()
-else:
-  circle()
+#TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message. 
