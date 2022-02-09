@@ -7,7 +7,7 @@ shift = int(input("Type the shift number:\n"))
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 def encrypt(text,shift):
   for i in len(text):
-    text[i]=alphabet[shift]
+    text[i]+=alphabet[shift]
     print(text)
 
 encrypt(text,shift)
